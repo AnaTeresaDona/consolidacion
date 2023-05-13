@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase consolidación 13 de mayo 2023</title>
+
+    <script src="https://kit.fontawesome.com/a32b71798e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Instrucciones
+
+Formulario
+3 campos en fila
+nombre producto  |  cantidad   | precio
+nombre producto  |  cantidad   | precio
+botón de calcular
+Total x producto1
+total x producto2
+Total final: 
+
+resultado se muestra en pantalla -->
+<div class="container mt-5">
+
+
+<form>
+
+  <div>
+
+    <!-- producto 1 -->
+    <div class="row">
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="text" class="form-label">producto 1</label>
+          <input type="text" class="form-control" id="producto1" aria-describedby="emailHelp">
+        </div>
+      </div>
+  
+      <div class="col-3">
+  
+        <div class="mb-3">
+          <label for="number" class="form-label">cantidad</label>
+          <input type="number" class="form-control" id="cantidad1">
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="number" class="form-label">precio</label>
+          <input type="number" class="form-control" id="precio1">
+        </div>
+
+      </div>
+
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="number" class="form-label">Total</label>
+          <input type="number" class="form-control" id="total1">
+        </div>
+      </div>  
+    
+    </div>
+
+    <!-- producto 2 -->
+
+    <div class="row">
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="text" class="form-label">producto 2</label>
+          <input type="text" class="form-control" id="producto2" aria-describedby="emailHelp">
+        </div>
+      </div>
+  
+      <div class="col-3">
+  
+          <div class="mb-3">
+        <label for="number" class="form-label">cantidad</label>
+        <input type="number" class="form-control" id="cantidad2">
+      </div>
+      </div>
+
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="number" class="form-label">precio</label>
+          <input type="number" class="form-control" id="precio2">
+      </div>
+      </div>
+
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="number" class="form-label">Total</label>
+          <input type="number" class="form-control" id="total2">
+        </div>
+      </div>
+
+      
+  
+    
+    </div>
+    <button type="submit" class="btn btn-warning" id="calcular">Calcular</button>
+
+</form>
+
+  <div class="container m-5">
+    
+    <h1  > El total es: $<spam id="total"></spam> </h1>
+  </div>
+
+</div>
+
+
+  
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    
+</body>
+</html>
