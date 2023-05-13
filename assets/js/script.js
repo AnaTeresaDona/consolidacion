@@ -6,6 +6,10 @@ let cantidad2 = document.getElementById('cantidad2');
 let precio2 = document.getElementById('precio2');
 let calcular = document.getElementById('calcular');
 
+precio2.addEventListener('change', function(){
+    document.getElementById('calcular').style.display ='block';
+})
+
 // Opciones: referenciar un id => addEventListener
 //          function onclick =>javascript aplicar function
 // value =>solo para los atributos input
@@ -16,31 +20,25 @@ calcular.addEventListener("click", function(e){
 
     /**Validación que sirve para saber si el usuario coloco la info: */
 
-    if (cantidad1.value == "" && cantidad1.value < 1){
-        alert(`La respuesta entregada es incorrecta. Por favor revisa:
+    /**Opción 1: que el usuario no te rompa el código usando if */
+
+    if (cantidad1.value == "" || cantidad2.value == "" || precio1.value == "" || precio2.value ==""){
+        alert(`El valor ingresado es incorrecto. Por favor revisa:
         - ¿Estoy usando números?
         - ¿Estoy usando cantidades que existen en la realidad física?
         - ¿Necesito un tiempo para meditar mi respuesta?`);
         return; /**importante Detiene la ejecución del código si se cumple la condición*/
     }
 
-    if (precio1.value == ""){
-        alert("Somos una sociedad capitalista, bubu");
-        return;
-    }
-
-    if (cantidad2.value == ""){
-        alert("Necesito que pongas una cantidad, pela@");
+    if (precio1.value < 0 || cantidad2.value < 0  || precio1.value < 0  || precio2.value < 0 ){
+        alert(`El valor ingresado es incorrecto. Por favor revisa:
+        - ¿Estoy usando números?
+        - ¿Estoy usando cantidades que existen en la realidad física?
+        - ¿Necesito un tiempo para meditar mi respuesta?`);
         return; /**importante Detiene la ejecución del código si se cumple la condición*/
     }
 
-    if (precio2.value == ""){
-        alert("Somos una sociedad capitalista, bubu");
-        return;
-    }
-
-
-
+    // document.getElementById('calcular').style.display='block';
     
     let total1 = cantidad1.value*precio1.value;
     let total2 = cantidad2.value*precio2.value;
